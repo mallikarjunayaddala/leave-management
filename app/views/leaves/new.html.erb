@@ -1,0 +1,50 @@
+<h1>Leave Form</h1>
+<%= form_for @leave do |f| %>
+	<div id='form_id'>
+		<%= f.label :from_date %>
+		<%= f.text_field :from_date, class: 'datepicker', id: 'first' %>
+	    <%= f.label :to_date %>
+	    <%= f.text_field :to_date, class: 'datepicker', id: 'second' %>
+	    <br/>
+	    <br/>
+	    <%= content_tag :div do %>
+     	<%= f.label :type_of_leave %>
+      	<%= f.select :type_of_leave, ["Sick Leave", "Planned Leave" ,"Casual Leave"],:prompt=>"select" %>
+      	<% end %>
+      	<br/>
+	    <br/>
+        <%= f.label :reason %>
+	    <%= f.text_field :reason %>
+	    <br/>
+	    <br/>
+	    <%= f.label :no_of_days %>
+	    <%= f.text_field :no_of_days,  id: 'btn' %>
+	    <br/>
+	    <br/>
+	    <%= f.submit "Save" %>
+	</div>
+<% end %>
+
+<script type="text/javascript">
+$(document).ready( function() {
+  $('.datepicker').datepicker({
+  	
+  });
+
+$("#btn").mouseenter(function(){
+	var a = (daydiff(parseDate($('#first').val()), parseDate($('#second').val())));
+	$("#btn").val(a);
+}); 
+    
+    function parseDate(str) {
+    var mdy = str.split('/');
+    return new Date(mdy[2], mdy[0]-1, mdy[1]);
+    alert(mdy);
+}
+
+function daydiff(first, second) {
+    return (second-first)/(1000*60*60*24);
+}
+
+});
+</script>

@@ -24,6 +24,7 @@ module LeaveManagement
     config.active_record.raise_in_transactional_callbacks = true
 
 
+
 ActionMailer::Base.smtp_settings = {
   :address              => "smtp.gmail.com",
   :port                 => 587,
@@ -33,5 +34,6 @@ ActionMailer::Base.smtp_settings = {
   :authentication       => "login",
   :enable_starttls_auto => true
 }
- end
+ 
+  end
 end
