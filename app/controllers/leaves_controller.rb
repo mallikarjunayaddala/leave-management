@@ -16,8 +16,8 @@ class LeavesController < ApplicationController
   def create
      
      @leave = Leave.new(user_params)
-     @leave.from_date = @leave.from_date.strftime("%m-%d-%Y") 
-     @leave.to_date = @leave.to_date.strftime("%m-%d-%Y") 
+     @leave.from_date = Date.strptime(user_params[:from_date], "%m/%d/%Y")
+     @leave.to_date = Date.strptime(user_params[:to_date], "%m/%d/%Y") 
      if @leave.save
        redirect_to leafe_path(@leave)
      else

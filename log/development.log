@@ -32706,3 +32706,775 @@ Started GET "/leaves/new" for 127.0.0.1 at 2015-10-29 09:35:17 +0530
 Processing by LeavesController#new as HTML
   Rendered leaves/new.html.erb within layouts/application (2.7ms)
 Completed 200 OK in 439ms (Views: 438.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "leaves" ("from_date", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["from_date", "2015-02-10"], ["created_at", "2015-10-29 04:25:35.159375"], ["updated_at", "2015-10-29 04:25:35.159375"]]
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "leaves" SET "to_date" = $1, "updated_at" = $2 WHERE "leaves"."id" = $3[0m  [["to_date", "2015-02-10"], ["updated_at", "2015-10-29 04:25:58.253614"], ["id", 13]]
+  [1m[35m (1.8ms)[0m  COMMIT
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 09:57:02 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LeavesController#index as HTML
+  [1m[35mLeave Load (0.9ms)[0m  SELECT "leaves".* FROM "leaves"
+  Rendered leaves/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 707ms (Views: 684.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 09:58:16 +0530
+Processing by LeavesController#index as HTML
+  [1m[36mLeave Load (0.2ms)[0m  [1mSELECT "leaves".* FROM "leaves"[0m
+  Rendered leaves/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 383ms (Views: 382.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "leaves" ("from_date", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["from_date", "2015-02-10"], ["created_at", "2015-10-29 04:28:57.271426"], ["updated_at", "2015-10-29 04:28:57.271426"]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 09:59:27 +0530
+Processing by LeavesController#index as HTML
+  [1m[35mLeave Load (0.3ms)[0m  SELECT "leaves".* FROM "leaves"
+  Rendered leaves/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 391ms (Views: 390.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/leaves.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/theme.self-df1da30301997b52795cb0213bccd335f2897b65f84d1d7d7c63c04f048d902f.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/menu.self-5277268fc75b8d6e851ccb5ca12e162c7440315d70974f34db800bc70330f135.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-2d6dfccae4fba2fe27d00372b974d4540d75a00cea6ceaa0a6aa33852b9d3ac3.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/accordion.self-ab9f397561a07488cf14279bc7186619e859cdd485b81d3a6439e85b81d32a05.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/core.self-23329dbe1961b938278306c019037fe36ff6ccb28193f1038e52ccbf52858163.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/button.self-524bbf2d9cf9547e14eda3866ad90726890ff390563ea46013c1ca019694c320.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/datepicker.self-bf92a2196df590f06fad4ab5bb7ed4db1874a9bef0c9af85ea0490d2108b9966.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/draggable.self-ff524fb7ae3023ef910b4e6c5cd7260e4f4dc6fb2eca9a525dd478017639bbba.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/resizable.self-3a16663ae8d70cc7f633554daff3a5875f54915ae3071fc3f3a1aeb0f7c8ab24.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/dialog.self-3e41d6ad769c697e76dceeef1bf376008c8e93e85c144fea25437fa3188d86b8.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/progressbar.self-de3d9f82b3ceaaa88bb0686e77f2548a3cfea1cf4dc37df4f3bc70f99d86a95a.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/selectable.self-fa1d88ada89c5a57dae84c7cb4f17bf153cb1cff063ed4ba2091b5b5f54e77e6.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-9a2b20dc7f10d3a7b09d0dc5d038d02dd1aff160e97abf8eaa3d3f5ab09fbb4b.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/sortable.self-bd8078895e9d12cd8586eb9b507ccb4d533daadd0f103f7387554c30cc96313f.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/slider.self-57c4d255d192836d85e1253fe091b5b01fed1c389b0dbdedd71c129dcf1cfd35.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/spinner.self-2d292d2e83f1281032010a5acb9cb23492aeecdc95395a5d93f2a3bba9a2c400.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/tabs.self-3dec02555ec77af087a252cdd5be276e714d0059e052a2c92dc2c5401e9df63d.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/tooltip.self-a349b3ba7b1458eed72dc3ffba597af53b9ceb622e7a324cdfd1c01c7b351f1f.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/base.self-1b94b6a8eaf399d6f662a2ffe0b9b52a958c6180e15b6e07a7ecab0087c9234d.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/all.self-a9629accff9d629face2489f3b6d620ded83dd62f6f04f69e5b33eea2b8d73b6.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/accordion.self-c95f320275150a94241b004a91e21eef9c5ae9965a793cb3e2475f6078a1670d.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/menu.self-7abc1c9401509a7e4fc609b1e461be6fd17e8116e8fda19cc59d05ba79aefb68.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-3befc48aba87cead090cfd014562b2771a662ac6d2c8197b24c08b2d9f3d9f2d.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/droppable.self-a7a2b4c2cec8fc176f51e4e4291d92bfd3eec40b6a580b47fc54c16334d52882.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/effect.self-3acdb29e7da09c8f0195b994d2f04d73bfef50dc539c84fd2c835d964d33e5c1.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/effect-blind.self-ed102209d7aa0b7374f3db8478cc7dcff5f9980d3146e8bf9fbfab959c6d5d8a.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/effect-bounce.self-bfcb9288797ecd234ddeedf4fbc5b4c9de94a4e6d8d44e6faa5b5e9836fad9fd.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/effect-clip.self-7368e4597c32360b162d264ff8bbd0cf9fb1535eb9b4564e6eb7c1db3c774bf3.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/effect-drop.self-294aaa72126ad9c94d6558cca792eb3716754713aca98f18a9dd7c493150ed92.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/effect-explode.self-68e74dc114a52f3f4d7033e40c39196961bdcf439652daa2e98baa115c7bb44b.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/effect-fade.self-42d542a5253e0a610717460102ee6bee339c656cc188e491d89eb0779043c963.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/effect-fold.self-ad9967f153423916300dbf1104b00f7ad7bbd6a222a0fcc1012ebe251bcb13c8.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/effect-highlight.self-f922b7179ab8ccfa7865141f38865bba0a3d2bdceba7561c27ca14544dbfd996.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/effect-size.self-368aecefa09656a2be5c72dc8e685b120363a3df812134cbd2dd998bafa179fd.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/effect-scale.self-884a5abcb6d90fcd9f9a071aa8329638184df688afced1b1d3b6be6c69f4dd7f.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/effect-puff.self-93415831093923a70f671d73e8d0b3d94deb37ac7472a036a4add545f565c166.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/effect-pulsate.self-eb107c0d136eccdfbd8a2f0f2ee71e0f6911cb300c6b63cc2fe4f6532e6a9a97.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/effect-shake.self-63bcc14897aac5b84e10690be94d64d5724f864aa14c913b4d1030c461a256ad.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/effect-slide.self-c93054a4a80d1f986760806d81ab067e4a4120bf103337e152ecc24d36e785f6.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/effect-transfer.self-181245634ec522320fc1081f6dbf94fd982f34eefa03555f76817dedfcdea336.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/progressbar.self-a259ff5a2a5e7aef0ec21bda94edd0f6bc1e9821128d901de415956edf212b0d.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/selectable.self-42e53fc2f95211314e36a8094c42560f869c207f16d68cfc206aa37201dcdc03.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-09dbcac573f0e508194bd9deff254db090889b380d030261857860309c0918e8.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/slider.self-8af8d2a0661743ba88b4cfb99d5c8c874cfa3fc6528ae4e9252366b388def0b7.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/spinner.self-3c8c95a7bc9c877d0f9c16789246bbedda6b8e8fbf5927951babdab775aed02e.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui/tooltip.self-38f04ac3a6c8fb2391ec6832b68845671cc9013a94371b7eb239478f4835eb73.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/jquery-ui.self-52111578aa54225c9ebfe06f78a62771020ee548bb27d62228ee3f5e6633969d.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/leaves.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2015-10-29 09:59:28 +0530
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "leaves" ("from_date", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["from_date", "2015-02-10"], ["created_at", "2015-10-29 04:29:56.263245"], ["updated_at", "2015-10-29 04:29:56.263245"]]
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "leaves" SET "reason" = $1, "updated_at" = $2 WHERE "leaves"."id" = $3[0m  [["reason", "fever"], ["updated_at", "2015-10-29 04:30:25.309780"], ["id", 15]]
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "leaves" SET "type_of_leave" = $1, "updated_at" = $2 WHERE "leaves"."id" = $3  [["type_of_leave", "Sick Leave"], ["updated_at", "2015-10-29 04:31:12.421882"], ["id", 15]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "leaves" SET "no_of_days" = $1, "updated_at" = $2 WHERE "leaves"."id" = $3[0m  [["no_of_days", 13], ["updated_at", "2015-10-29 04:31:29.221645"], ["id", 15]]
+  [1m[35m (1.7ms)[0m  COMMIT
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 10:01:37 +0530
+Processing by LeavesController#index as HTML
+  [1m[36mLeave Load (0.3ms)[0m  [1mSELECT "leaves".* FROM "leaves"[0m
+  Rendered leaves/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 361ms (Views: 360.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/leaves.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/theme.self-df1da30301997b52795cb0213bccd335f2897b65f84d1d7d7c63c04f048d902f.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/accordion.self-ab9f397561a07488cf14279bc7186619e859cdd485b81d3a6439e85b81d32a05.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/core.self-23329dbe1961b938278306c019037fe36ff6ccb28193f1038e52ccbf52858163.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/menu.self-5277268fc75b8d6e851ccb5ca12e162c7440315d70974f34db800bc70330f135.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-2d6dfccae4fba2fe27d00372b974d4540d75a00cea6ceaa0a6aa33852b9d3ac3.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/button.self-524bbf2d9cf9547e14eda3866ad90726890ff390563ea46013c1ca019694c320.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/datepicker.self-bf92a2196df590f06fad4ab5bb7ed4db1874a9bef0c9af85ea0490d2108b9966.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/draggable.self-ff524fb7ae3023ef910b4e6c5cd7260e4f4dc6fb2eca9a525dd478017639bbba.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/resizable.self-3a16663ae8d70cc7f633554daff3a5875f54915ae3071fc3f3a1aeb0f7c8ab24.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/dialog.self-3e41d6ad769c697e76dceeef1bf376008c8e93e85c144fea25437fa3188d86b8.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/progressbar.self-de3d9f82b3ceaaa88bb0686e77f2548a3cfea1cf4dc37df4f3bc70f99d86a95a.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/selectable.self-fa1d88ada89c5a57dae84c7cb4f17bf153cb1cff063ed4ba2091b5b5f54e77e6.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-9a2b20dc7f10d3a7b09d0dc5d038d02dd1aff160e97abf8eaa3d3f5ab09fbb4b.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/sortable.self-bd8078895e9d12cd8586eb9b507ccb4d533daadd0f103f7387554c30cc96313f.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/slider.self-57c4d255d192836d85e1253fe091b5b01fed1c389b0dbdedd71c129dcf1cfd35.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/spinner.self-2d292d2e83f1281032010a5acb9cb23492aeecdc95395a5d93f2a3bba9a2c400.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/tabs.self-3dec02555ec77af087a252cdd5be276e714d0059e052a2c92dc2c5401e9df63d.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/tooltip.self-a349b3ba7b1458eed72dc3ffba597af53b9ceb622e7a324cdfd1c01c7b351f1f.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/base.self-1b94b6a8eaf399d6f662a2ffe0b9b52a958c6180e15b6e07a7ecab0087c9234d.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/all.self-a9629accff9d629face2489f3b6d620ded83dd62f6f04f69e5b33eea2b8d73b6.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/accordion.self-c95f320275150a94241b004a91e21eef9c5ae9965a793cb3e2475f6078a1670d.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/menu.self-7abc1c9401509a7e4fc609b1e461be6fd17e8116e8fda19cc59d05ba79aefb68.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-3befc48aba87cead090cfd014562b2771a662ac6d2c8197b24c08b2d9f3d9f2d.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/droppable.self-a7a2b4c2cec8fc176f51e4e4291d92bfd3eec40b6a580b47fc54c16334d52882.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/effect.self-3acdb29e7da09c8f0195b994d2f04d73bfef50dc539c84fd2c835d964d33e5c1.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/effect-blind.self-ed102209d7aa0b7374f3db8478cc7dcff5f9980d3146e8bf9fbfab959c6d5d8a.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/effect-bounce.self-bfcb9288797ecd234ddeedf4fbc5b4c9de94a4e6d8d44e6faa5b5e9836fad9fd.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/effect-clip.self-7368e4597c32360b162d264ff8bbd0cf9fb1535eb9b4564e6eb7c1db3c774bf3.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/effect-drop.self-294aaa72126ad9c94d6558cca792eb3716754713aca98f18a9dd7c493150ed92.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/effect-explode.self-68e74dc114a52f3f4d7033e40c39196961bdcf439652daa2e98baa115c7bb44b.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/effect-fade.self-42d542a5253e0a610717460102ee6bee339c656cc188e491d89eb0779043c963.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/effect-fold.self-ad9967f153423916300dbf1104b00f7ad7bbd6a222a0fcc1012ebe251bcb13c8.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/effect-highlight.self-f922b7179ab8ccfa7865141f38865bba0a3d2bdceba7561c27ca14544dbfd996.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/effect-size.self-368aecefa09656a2be5c72dc8e685b120363a3df812134cbd2dd998bafa179fd.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/effect-scale.self-884a5abcb6d90fcd9f9a071aa8329638184df688afced1b1d3b6be6c69f4dd7f.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/effect-puff.self-93415831093923a70f671d73e8d0b3d94deb37ac7472a036a4add545f565c166.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/effect-pulsate.self-eb107c0d136eccdfbd8a2f0f2ee71e0f6911cb300c6b63cc2fe4f6532e6a9a97.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/effect-shake.self-63bcc14897aac5b84e10690be94d64d5724f864aa14c913b4d1030c461a256ad.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/effect-slide.self-c93054a4a80d1f986760806d81ab067e4a4120bf103337e152ecc24d36e785f6.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/effect-transfer.self-181245634ec522320fc1081f6dbf94fd982f34eefa03555f76817dedfcdea336.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/progressbar.self-a259ff5a2a5e7aef0ec21bda94edd0f6bc1e9821128d901de415956edf212b0d.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/selectable.self-42e53fc2f95211314e36a8094c42560f869c207f16d68cfc206aa37201dcdc03.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-09dbcac573f0e508194bd9deff254db090889b380d030261857860309c0918e8.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/slider.self-8af8d2a0661743ba88b4cfb99d5c8c874cfa3fc6528ae4e9252366b388def0b7.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/spinner.self-3c8c95a7bc9c877d0f9c16789246bbedda6b8e8fbf5927951babdab775aed02e.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui/tooltip.self-38f04ac3a6c8fb2391ec6832b68845671cc9013a94371b7eb239478f4835eb73.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/jquery-ui.self-52111578aa54225c9ebfe06f78a62771020ee548bb27d62228ee3f5e6633969d.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/leaves.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2015-10-29 10:01:38 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 10:04:10 +0530
+Processing by LeavesController#index as HTML
+  [1m[35mLeave Load (0.3ms)[0m  SELECT "leaves".* FROM "leaves"
+  Rendered leaves/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 362ms (Views: 361.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/leaves.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/theme.self-df1da30301997b52795cb0213bccd335f2897b65f84d1d7d7c63c04f048d902f.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-2d6dfccae4fba2fe27d00372b974d4540d75a00cea6ceaa0a6aa33852b9d3ac3.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/accordion.self-ab9f397561a07488cf14279bc7186619e859cdd485b81d3a6439e85b81d32a05.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/core.self-23329dbe1961b938278306c019037fe36ff6ccb28193f1038e52ccbf52858163.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/menu.self-5277268fc75b8d6e851ccb5ca12e162c7440315d70974f34db800bc70330f135.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/button.self-524bbf2d9cf9547e14eda3866ad90726890ff390563ea46013c1ca019694c320.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/datepicker.self-bf92a2196df590f06fad4ab5bb7ed4db1874a9bef0c9af85ea0490d2108b9966.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/draggable.self-ff524fb7ae3023ef910b4e6c5cd7260e4f4dc6fb2eca9a525dd478017639bbba.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/resizable.self-3a16663ae8d70cc7f633554daff3a5875f54915ae3071fc3f3a1aeb0f7c8ab24.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/dialog.self-3e41d6ad769c697e76dceeef1bf376008c8e93e85c144fea25437fa3188d86b8.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/progressbar.self-de3d9f82b3ceaaa88bb0686e77f2548a3cfea1cf4dc37df4f3bc70f99d86a95a.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/selectable.self-fa1d88ada89c5a57dae84c7cb4f17bf153cb1cff063ed4ba2091b5b5f54e77e6.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-9a2b20dc7f10d3a7b09d0dc5d038d02dd1aff160e97abf8eaa3d3f5ab09fbb4b.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/sortable.self-bd8078895e9d12cd8586eb9b507ccb4d533daadd0f103f7387554c30cc96313f.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/slider.self-57c4d255d192836d85e1253fe091b5b01fed1c389b0dbdedd71c129dcf1cfd35.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/spinner.self-2d292d2e83f1281032010a5acb9cb23492aeecdc95395a5d93f2a3bba9a2c400.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/tabs.self-3dec02555ec77af087a252cdd5be276e714d0059e052a2c92dc2c5401e9df63d.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/tooltip.self-a349b3ba7b1458eed72dc3ffba597af53b9ceb622e7a324cdfd1c01c7b351f1f.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/base.self-1b94b6a8eaf399d6f662a2ffe0b9b52a958c6180e15b6e07a7ecab0087c9234d.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/all.self-a9629accff9d629face2489f3b6d620ded83dd62f6f04f69e5b33eea2b8d73b6.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/accordion.self-c95f320275150a94241b004a91e21eef9c5ae9965a793cb3e2475f6078a1670d.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/menu.self-7abc1c9401509a7e4fc609b1e461be6fd17e8116e8fda19cc59d05ba79aefb68.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-3befc48aba87cead090cfd014562b2771a662ac6d2c8197b24c08b2d9f3d9f2d.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/droppable.self-a7a2b4c2cec8fc176f51e4e4291d92bfd3eec40b6a580b47fc54c16334d52882.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/effect.self-3acdb29e7da09c8f0195b994d2f04d73bfef50dc539c84fd2c835d964d33e5c1.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/effect-blind.self-ed102209d7aa0b7374f3db8478cc7dcff5f9980d3146e8bf9fbfab959c6d5d8a.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/effect-bounce.self-bfcb9288797ecd234ddeedf4fbc5b4c9de94a4e6d8d44e6faa5b5e9836fad9fd.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/effect-clip.self-7368e4597c32360b162d264ff8bbd0cf9fb1535eb9b4564e6eb7c1db3c774bf3.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/effect-drop.self-294aaa72126ad9c94d6558cca792eb3716754713aca98f18a9dd7c493150ed92.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/effect-explode.self-68e74dc114a52f3f4d7033e40c39196961bdcf439652daa2e98baa115c7bb44b.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/effect-fade.self-42d542a5253e0a610717460102ee6bee339c656cc188e491d89eb0779043c963.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/effect-fold.self-ad9967f153423916300dbf1104b00f7ad7bbd6a222a0fcc1012ebe251bcb13c8.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/effect-highlight.self-f922b7179ab8ccfa7865141f38865bba0a3d2bdceba7561c27ca14544dbfd996.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/effect-size.self-368aecefa09656a2be5c72dc8e685b120363a3df812134cbd2dd998bafa179fd.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/effect-scale.self-884a5abcb6d90fcd9f9a071aa8329638184df688afced1b1d3b6be6c69f4dd7f.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/effect-puff.self-93415831093923a70f671d73e8d0b3d94deb37ac7472a036a4add545f565c166.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/effect-pulsate.self-eb107c0d136eccdfbd8a2f0f2ee71e0f6911cb300c6b63cc2fe4f6532e6a9a97.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/effect-shake.self-63bcc14897aac5b84e10690be94d64d5724f864aa14c913b4d1030c461a256ad.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/effect-slide.self-c93054a4a80d1f986760806d81ab067e4a4120bf103337e152ecc24d36e785f6.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/effect-transfer.self-181245634ec522320fc1081f6dbf94fd982f34eefa03555f76817dedfcdea336.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/progressbar.self-a259ff5a2a5e7aef0ec21bda94edd0f6bc1e9821128d901de415956edf212b0d.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/selectable.self-42e53fc2f95211314e36a8094c42560f869c207f16d68cfc206aa37201dcdc03.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-09dbcac573f0e508194bd9deff254db090889b380d030261857860309c0918e8.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/slider.self-8af8d2a0661743ba88b4cfb99d5c8c874cfa3fc6528ae4e9252366b388def0b7.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/spinner.self-3c8c95a7bc9c877d0f9c16789246bbedda6b8e8fbf5927951babdab775aed02e.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui/tooltip.self-38f04ac3a6c8fb2391ec6832b68845671cc9013a94371b7eb239478f4835eb73.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/jquery-ui.self-52111578aa54225c9ebfe06f78a62771020ee548bb27d62228ee3f5e6633969d.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/leaves.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2015-10-29 10:04:11 +0530
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "leaves" SET "to_date" = $1, "updated_at" = $2 WHERE "leaves"."id" = $3  [["to_date", "2013-10-15"], ["updated_at", "2015-10-29 04:44:27.438290"], ["id", 15]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 10:18:29 +0530
+Processing by LeavesController#index as HTML
+  [1m[36mLeave Load (0.2ms)[0m  [1mSELECT "leaves".* FROM "leaves"[0m
+  Rendered leaves/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 414ms (Views: 413.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/leaves/new" for 127.0.0.1 at 2015-10-29 10:18:36 +0530
+Processing by LeavesController#new as HTML
+  Rendered leaves/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 368ms (Views: 367.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/leaves" for 127.0.0.1 at 2015-10-29 10:18:45 +0530
+Processing by LeavesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8w2NxzVIXwNRVpnZ6+Gi3RoCvdvL6M2msHlVhy3gPLKgalCc2tIKTNGYeyCyaMHFYtZQuED361NIwtLeOs7+Qg==", "leave"=>{"from_date"=>"10/28/2015", "to_date"=>"10/31/2015", "type_of_leave"=>"Casual Leave", "reason"=>"Function", "no_of_days"=>"3"}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `strftime' for nil:NilClass):
+  app/controllers/leaves_controller.rb:19:in `create'
+
+
+  Rendered /home/universum-011/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /home/universum-011/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/universum-011/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/universum-011/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.3ms)
+  Rendered /home/universum-011/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/universum-011/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/universum-011/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/universum-011/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/universum-011/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.0ms)
+  Rendered /home/universum-011/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/universum-011/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/universum-011/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 11:10:37 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LeavesController#index as HTML
+  [1m[35mLeave Load (1.9ms)[0m  SELECT "leaves".* FROM "leaves"
+  Rendered leaves/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 722ms (Views: 699.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/leaves/new" for 127.0.0.1 at 2015-10-29 11:10:42 +0530
+Processing by LeavesController#new as HTML
+  Rendered leaves/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 396ms (Views: 395.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/leaves" for 127.0.0.1 at 2015-10-29 11:10:52 +0530
+Processing by LeavesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7ZDFidrqcMgyyNUT1+brSFirBXeFQ4xXNqek1BuYqN2+9xjSNXAlh7IGN+qOb4hQIH/oFA5cqqLOHCONDLZqLQ==", "leave"=>{"from_date"=>"10/20/2015", "to_date"=>"10/31/2015", "type_of_leave"=>"Sick Leave", "reason"=>"Function", "no_of_days"=>"11"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "leaves" ("reason", "type_of_leave", "no_of_days", "from_date", "to_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["reason", "Function"], ["type_of_leave", "Sick Leave"], ["no_of_days", 11], ["from_date", "2015-10-20"], ["to_date", "2015-10-31"], ["created_at", "2015-10-29 05:40:52.372528"], ["updated_at", "2015-10-29 05:40:52.372528"]]
+  [1m[36m (5.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/leaves/18
+Completed 302 Found in 14ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/leaves/18" for 127.0.0.1 at 2015-10-29 11:10:52 +0530
+Processing by LeavesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mLeave Load (0.2ms)[0m  SELECT  "leaves".* FROM "leaves" WHERE "leaves"."id" = $1 LIMIT 1  [["id", 18]]
+  Rendered leaves/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 412ms (Views: 406.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/leaves/18" for 127.0.0.1 at 2015-10-29 11:14:23 +0530
+Processing by LeavesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mLeave Load (0.2ms)[0m  [1mSELECT  "leaves".* FROM "leaves" WHERE "leaves"."id" = $1 LIMIT 1[0m  [["id", 18]]
+  Rendered leaves/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 411ms (Views: 403.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/leaves/" for 127.0.0.1 at 2015-10-29 11:15:19 +0530
+Processing by LeavesController#index as HTML
+  [1m[35mLeave Load (0.3ms)[0m  SELECT "leaves".* FROM "leaves"
+  Rendered leaves/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 448ms (Views: 447.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 11:16:36 +0530
+Processing by LeavesController#index as HTML
+  [1m[36mLeave Load (0.3ms)[0m  [1mSELECT "leaves".* FROM "leaves"[0m
+  Rendered leaves/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 425ms (Views: 424.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/leaves/new" for 127.0.0.1 at 2015-10-29 11:16:41 +0530
+Processing by LeavesController#new as HTML
+  Rendered leaves/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 436ms (Views: 434.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/leaves" for 127.0.0.1 at 2015-10-29 11:16:57 +0530
+Processing by LeavesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eOqMkDd0zOF5VSQvRKV78qwCh8pirUR4cn0HI+pgygQrjVHL2O6ZrvmbxtYdLBjq1NZqqemyYo2KxoB6/U4I9A==", "leave"=>{"from_date"=>"10/20/2015", "to_date"=>"10/31/2015", "type_of_leave"=>"Planned Leave", "reason"=>"Function", "no_of_days"=>"11"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "leaves" ("reason", "type_of_leave", "no_of_days", "from_date", "to_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["reason", "Function"], ["type_of_leave", "Planned Leave"], ["no_of_days", 11], ["from_date", "2015-10-20"], ["to_date", "2015-10-31"], ["created_at", "2015-10-29 05:46:57.029178"], ["updated_at", "2015-10-29 05:46:57.029178"]]
+  [1m[35m (3.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/leaves/19
+Completed 302 Found in 10ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/leaves/19" for 127.0.0.1 at 2015-10-29 11:16:57 +0530
+Processing by LeavesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mLeave Load (0.2ms)[0m  [1mSELECT  "leaves".* FROM "leaves" WHERE "leaves"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered leaves/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 435ms (Views: 434.2ms | ActiveRecord: 0.2ms)
