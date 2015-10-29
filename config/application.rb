@@ -22,5 +22,16 @@ module LeaveManagement
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-  end
+
+
+ActionMailer::Base.smtp_settings = {
+  :address              => "smtp.gmail.com",
+  :port                 => 587,
+  :domain               => "gmail.com",
+  :user_name            => "<address>@gmail.com",
+  :password             => "<password>",
+  :authentication       => "login",
+  :enable_starttls_auto => true
+}
+ end
 end

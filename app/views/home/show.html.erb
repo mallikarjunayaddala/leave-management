@@ -1,0 +1,6 @@
+<h1>Home#show</h1>
+<p>Find me in app/views/home/show.html.erb</p>
+<%= current_user.name %>
+<% if user_signed_in? %>
+<%= link_to "sign_out", destroy_user_session_path, :method => "delete"  %>
+<% end %>
