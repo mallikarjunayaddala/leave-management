@@ -1,0 +1,16 @@
+
+
+<div class="container">
+<% @leaves.each do |leave| %>
+  <% if (current_user.name == leave.user.name) %>
+    Name:<%= leave.user.name %><br/>
+	From:<%= leave.from_date.strftime("%d-%m-%Y") %><br/>
+	To:<%= leave.to_date.strftime("%d-%m-%y") %><br/>
+	Type of Leave:<%= leave.type_of_leave %><br/>
+	Reason:<%= leave.reason %><br/>
+	No Of Days:<%= leave.no_of_days %><br/>
+	<br/>
+	<% end %>
+<% end %>
+<%= link_to 'Apply Leave', new_leave_path %>
+</div>

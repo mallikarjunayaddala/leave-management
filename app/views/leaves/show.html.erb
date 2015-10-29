@@ -1,0 +1,9 @@
+
+<div class= "container">
+From:<%= @leave.from_date.strftime("%D-%M-%Y") %><br>
+To:<%= @leave.to_date.strftime("%d-%m-%y") %><br>
+Type of Leave:<%= @leave.type_of_leave %><br>
+Reason:<%= @leave.reason %><br>
+No Of Days:<%= @leave.no_of_days %><br>
+<%= link_to 'Applied Leave', leaves_path %>
+</div>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  from_date: 2015-10-27
+  to_date: 2015-10-27
+  reason: MyText
+  type_of_leave: MyString
+  no_of_days: 1
+
+two:
+  from_date: 2015-10-27
+  to_date: 2015-10-27
+  reason: MyText
+  type_of_leave: MyString
+  no_of_days: 1
