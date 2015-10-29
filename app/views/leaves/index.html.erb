@@ -1,0 +1,9 @@
+<% @leaves.each do |leave| %>
+	From:<%= leave.from_date %><br/>
+	To:<%= leave.to_date %><br/>
+	Type of Leave:<%= leave.type_of_leave %><br/>
+	Reason:<%= leave.reason %><br/>
+	No Of Days:<%= leave.no_of_days %><br/>
+	<br/>
+<% end %>
+<%= link_to 'Apply Leave', new_leafe_path %>

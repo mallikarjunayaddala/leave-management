@@ -1,1 +1,2 @@
-# LeavePage
+# leave-management
+Leave tracking app
