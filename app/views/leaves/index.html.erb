@@ -1,9 +1,22 @@
-<% @leaves.each do |leave| %>
-	From:<%= leave.from_date %><br/>
-	To:<%= leave.to_date %><br/>
-	Type of Leave:<%= leave.type_of_leave %><br/>
-	Reason:<%= leave.reason %><br/>
-	No Of Days:<%= leave.no_of_days %><br/>
-	<br/>
-<% end %>
-<%= link_to 'Apply Leave', new_leafe_path %>
+
+<div class="container">    
+<h1><%= current_user.name %></h1>   
+<table border='1'> 
+    <tr><th>From Date</th> 
+    <th>To Date</th>   
+    <th>No of Days</th>    
+    <th>Type of Leave</th>  
+    <th>Reason</th>  </tr> 
+  <% @leaves.each do |leave| %> 
+  <% if (current_user.name == leave.user.name) %>  
+<tr><td><%= leave.from_date.strftime("%d-%m-%Y") %></td>  
+    <td><%= leave.to_date.strftime("%d-%m-%y") %></td>  
+    <td><%= leave.no_of_days %></td>  
+    <td><%= leave.type_of_leave %></td>  
+    <td><%= leave.reason %></td></tr>  
+    <% end %>
+    <% end %></table>
+ <%= link_to 'Apply Leave', new_leave_path %><br>
+ 
+ </div> 
+ 

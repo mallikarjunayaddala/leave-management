@@ -1,29 +1,30 @@
+
 <h1>Leave Form</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
 <%= form_for @leave do |f| %>
+  <%= render 'leaves/error_message', object: f.object %>
 	<div id='form_id'>
 		<%= f.label :from_date %>
 		<%= f.text_field :from_date, class: 'datepicker', id: 'first' %>
 	    <%= f.label :to_date %>
 	    <%= f.text_field :to_date, class: 'datepicker', id: 'second' %>
-	    <br/>
-	    <br/>
+	   
 	    <%= content_tag :div do %>
      	<%= f.label :type_of_leave %>
-      	<%= f.select :type_of_leave, ["Sick Leave", "Planned Leave" ,"Casual Leave"],:prompt=>"select" %>
+      	<%= f.select :type_of_leave, ["Sick Leave", "Planned Leave" ,"Casual Leave"],:prompt=>"select", id: "dropdown" %>
       	<% end %>
-      	<br/>
-	    <br/>
-        <%= f.label :reason %>
-	    <%= f.text_field :reason %>
-	    <br/>
-	    <br/>
 	    <%= f.label :no_of_days %>
 	    <%= f.text_field :no_of_days,  id: 'btn' %>
-	    <br/>
-	    <br/>
-	    <%= f.submit "Save" %>
+	    <%= f.label :reason %>
+	    <%= f.text_field :reason %>
+	    <%= f.submit "Apply", class: "btn btn-primary" %>
 	</div>
 <% end %>
+<%= link_to 'Applied Leave', leaves_path %>
+</div>
+</div>
 
 <script type="text/javascript">
 $(document).ready( function() {

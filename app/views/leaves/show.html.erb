@@ -1,5 +1,12 @@
-From:<%= @leave.from_date %>
-To:<%= @leave.to_date %>
-Type of Leave:<%= @leave.type_of_leave %>
-Reason:<%= @leave.reason %>
-No Of Days:<%= @leave.no_of_days %>
+
+
+<h1><%= current_user.name %></h1>   
+<div class= "container">
+<li>From:<%= @leave.from_date.strftime("%d-%m-%y") %></li><br>
+<li>To:<%= @leave.to_date.strftime("%d-%m-%y") %></li><br>
+<li>Type of Leave:<%= @leave.type_of_leave %></li><br>
+<li>Reason:<%= @leave.reason %></li><br>
+<li>No Of Days:<%= @leave.no_of_days %></li><br>
+
+<%= link_to 'Applied Leave', leaves_path %>
+</div>
