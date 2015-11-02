@@ -9,10 +9,12 @@ $gray-medium-light: #eaeaea;
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
   box-sizing:         border-box;
+
 }
 
 body {
   padding-top: 60px;
+ 
 }
 
 section {
@@ -58,6 +60,7 @@ p {
  /* header */
 
 #logo {
+ width: 50%;
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
@@ -69,15 +72,16 @@ p {
 }
 
 #logo:hover {
-  color: #DCDCDC;
+ 
   text-decoration: none;
 }
 
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
+  
   color: #777;
+
 }
 
 footer a {
@@ -107,20 +111,28 @@ footer ul li {
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 100%;
+  width: 50%;
   margin-bottom: 15px;
   @include box_sizing;
+  color: black;
 }
 
 input {
+ width: 50%;
   height: auto !important;
+  color: black;
 }
 
 #error_explanation {
-  color: red;
+  text-align: left;
+  color: white;
   ul {
-    color: red;
+    color: white;
     margin: 0 0 30px 0;
+  }
+  h2{
+  color: white;
+  text-align: left;
   }
 }
 
@@ -128,6 +140,7 @@ input {
   @extend .has-error;
   .form-control {
     color: $state-danger-text;
+    
   }
 }
 
@@ -136,10 +149,10 @@ input {
   float: left;
   margin-top: -10px;
   margin-bottom: 10px;
-  margin-left: 0px;
+  margin-left: 5px;
   span {
-    margin-left: 5px;
-    font-weight: normal;
+  margin-left: 125px;
+  font-weight: normal;
   }
 }
 
@@ -181,11 +194,89 @@ aside {
 }
 
 #first {
-  width: 300px;
+  width: 50px;
 }
 #second {
-  width: 300px;
+  width: 50px;
 }
 #dropdown {
-  width: 300px;
+  width: 50px;
 }
+
+/* table */
+
+table, td, th {
+    border: 1px solid black;
+text-align: center;
+}
+
+table {
+    width: 50%;
+}
+
+#sign {
+  background-color: white;
+  color: black;
+  border: 0;
+}
+.anchor{
+  color: white;
+  position: relative;
+  left: -26%;
+  
+}
+
+
+.bg-1 { 
+     background-color: #f4511e; /* Orange */
+     color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #474e5d;
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff;
+      color: #555555;
+  }
+  .bg-4 { 
+      
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+      
+  }
+  
+  #myNavbar{
+  
+  padding-top: 10px;
+  padding-bottom: 10px;
+  }
+  .row{
+   background-color: #f4511e; /* Orange */
+   color: #ffffff;
+  }
+    .btn btn-primary{
+  background-color: #ffffff;
+  }
+  .form-control{
+   width: 50%;
+   color: black;
+    }
+  .actions{
+   
+    h2{
+    text-align: left;
+    }
+  }
