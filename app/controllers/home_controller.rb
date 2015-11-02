@@ -19,4 +19,7 @@ class HomeController < ApplicationController
 
   def delete
   end
+
+  def about
+  end
 end

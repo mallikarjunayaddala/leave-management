@@ -1,8 +1,6 @@
-
-<header>
-  
-   <nav class="navbar navbar-default">
-   <div class="container">
+<header>  
+<nav class="navbar navbar-default">
+  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -14,22 +12,19 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About"  %></li>
-        <% if user_signed_in? %>
-              <li>
-                <%= link_to "Log out", destroy_user_session_path, :method => "delete" %>
-              </li>
-            </ul>
-          </li>
-        <% else %>
+        <li><%= link_to "About", about_path  %></li>
+          <% if user_signed_in? %>
+          <%if current_user.admin == true %>
+          <li><%= link_to "Admin page", admin_path %></li>
+          <% end %>
+          <li><%= link_to "Log out", destroy_user_session_path, :method => "delete" %></li>
+          <% else %>
           <li><%= link_to "Log in", new_user_session_path %></li>
-          </ul>
-        <% end %>
-        
+          <% end %>
       </ul>
+        
     </div>
   </div>
-  </nav> 
-
+</nav> 
 </header>
 

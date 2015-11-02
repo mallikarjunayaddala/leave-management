@@ -18,6 +18,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'devise'
+
+gem 'rails_admin'
+
 gem 'jquery-ui-rails'
 
 # Use jquery as the JavaScript library
