@@ -1,0 +1,42 @@
+
+<div class="container-fluid bg-1 text-center">
+<div class="container">
+	<h1><%= current_user.firstname %></h1>
+  <h2><%= current_user.date_of_joining.strftime("%d-%m-%Y") %></h2>
+<table border='1'>
+   <thead><tr>  
+    <th>Leave Type</th>
+    <th>Total Leave of this year</th>
+    <th>Leave Balance</th>
+  </tr></thead>
+  <tboby>
+    <tr><td>Casual Leave</td><td><%= Leave.count(current_user) %></td><td><%= get_type_leave("Casual Leave")%></td></tr>
+    <tr><td>Sick Leave</td><td><%= Leave.count(current_user) %></td><td><%= get_type_leave("Sick Leave")%></td></tr>
+    <tr><td>Planned Leave</td><td><%= Leave.count(current_user) %></td><td><%= get_type_leave("Planned Leave")%></td></tr>
+  </tboby>
+</table>
+<br><br>
+  <% if (current_user.leaves.count >= 1) %>
+	<table border='1'>
+  <tr>  
+    <th>From Date</th>
+    <th>To Date</th>
+    <th>No of Days</th>
+    <th>Type of Leave</th>
+    <th>Reason</th>
+  </tr>
+	<% current_user.leaves.each do |leave| %> 
+ <tr><td><%= leave.from_date.strftime("%d-%m-%Y") %></td>
+	<td><%= leave.to_date.strftime("%d-%m-%y") %></td>
+	<td><%= leave.no_of_days %></td>
+	<td><%= leave.type_of_leave %></td>
+	<td><%= leave.reason %></td></tr>
+<% end %>
+</table>
+<br/>
+<% end %>
+<%= link_to 'Apply Leave', new_leave_path %>
+</div>
+</div>
+
+

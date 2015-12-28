@@ -1,0 +1,17 @@
+
+<h1>Hi Praveen,</h1>
+
+<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%= @leave.user.firstname %> has requested for leave, details are given below.</h4>
+
+<div class= "container">
+	<ul >
+		<li>From:<%= @leave.from_date.strftime("%d-%m-%Y") %></li><br>
+		<li>To:<%= @leave.to_date.strftime("%d-%m-%Y") %></li><br>
+		<li>Type of Leave:<%= @leave.type_of_leave %></li><br>
+		<li>Reason:<%= @leave.reason %></li><br>
+		<li>No Of Days:<%= @leave.no_of_days %></li><br>
+	</ul>
+</div>
+
+<p>Thanks & Regards <br> Universum leavemanagement .</p>

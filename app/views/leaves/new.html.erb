@@ -1,0 +1,51 @@
+<h1>Leave Form</h1>
+<div class="row">
+	<div class="col-md-5 ">
+	</div>
+  	<div class="col-md-7 ">
+		<%= form_for @leave do |f| %>
+		<%= render 'leaves/error_message', object: f.object %>
+			<%= f.label :from_date %>
+			<%= f.text_field :from_date, class: 'datepicker', id: 'first' %><br />
+		    <%= f.label :to_date %>
+		    <%= f.text_field :to_date, class: 'datepicker', id: 'second'%>
+		    <br/>
+		    <%= f.label :no_of_days %>
+		    <%= f.text_field :no_of_days,  id: 'btn'%> 
+		   <%= content_tag :div do  %>
+		    <%= f.label :type_of_leave %>
+		   <%= f.select :type_of_leave, ["Sick Leave", "Planned Leave" ,"Casual Leave"],:prompt=>"select", id: "dropdown" %>
+	       <% end %>
+	        <%= f.label :reason %>
+		    <%= f.text_area :reason %><br />
+		    <%= f.submit "Apply", class: "btn btn-primary", id:"sign" %>
+		<% end %>
+		<br>
+   	<%= link_to 'Applied Leave', leaves_path %>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+$(document).ready( function() {
+  $('.datepicker').datepicker({ dateFormat: 'dd/mm/yy' });
+
+$("#btn").mouseenter(function(){
+	function parseDate(str) {
+    var mdy = str.split('/');
+    return new Date(mdy[2], mdy[1]-1, mdy[0]);
+}
+function daydiff(first, second) {
+    return (second-first)/(1000*60*60*24);
+}
+	var a = (daydiff(parseDate($('#first').val()), parseDate($('#second').val())));
+	if (a<0)
+	{
+		alert("to_date must less than from_date");
+	}
+	$("#btn").val(a+1);
+}); 
+
+});
+
+</script>

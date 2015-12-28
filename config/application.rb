@@ -22,5 +22,18 @@ module LeaveManagement
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.action_mailer.smtp_settings =  {
+        address: 'smtp.mandrillapp.com',
+        port: 587,
+        enable_starttls_auto: true,
+        user_name: "uledge@universumglobal.com",
+        password: "n7DR9i6iFGdLmENRJP8OWw",
+        authentication: "login"
+                                       }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default charset:'utf-8'
+
   end
 end

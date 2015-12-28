@@ -1,0 +1,49 @@
+<h2>Sign up</h2>
+
+<div class="row">
+
+  <div class="col-sm-5">
+  </div>
+  <div class="col-sm-5">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+        <div class="field">
+        <%= f.label :firstname %><br />
+        <%= f.text_field :firstname, class: "form-control" %>
+        </div>
+        <div class="field">
+        <%= f.label :lastname %><br />
+        <%= f.text_field :lastname, class: "form-control" %>
+        </div>
+        <div class="field">
+        <%= f.label :date_of_joining %>
+        <%= f.text_field :date_of_joining, class: 'datepicker' %><br />
+        </div>
+        
+        <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, class: "form-control", id:"day" %>
+        </div>
+        <div class="field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+        (<%= @minimum_password_length %> characters minimum)
+        <% end %>
+        <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+        </div>
+        <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+        </div>
+        <div class="actions">
+        <%= f.submit "Sign up", class: "btn btn-primary", id: "sign" %>
+        </div>
+      <% end %>
+      <%= render "devise/shared/links" %>
+  </div>
+</div>
+<script type="text/javascript">
+  $(function() {    
+    $( "#datepicker" ).datepicker({ dateFormat: 'dd-mm-yy' });  
+   }); 
+</script>

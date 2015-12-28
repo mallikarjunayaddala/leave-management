@@ -1,0 +1,337 @@
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+$gray-medium-light: #400000;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+
+}
+
+body {
+  padding-top: 60px;
+  align: center;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #330000;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+ 
+ /* header */
+
+#logo {
+ width: 50%;
+}
+
+
+#logo {
+
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #DCDCDC;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  text-decoration: none;
+}
+
+
+
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  top: 0px;
+  border-top: 2px solid #eaeaea;
+  text-align: right;
+}
+.img-responsive {
+  width: 40%
+}
+
+.image {
+  margin-top: -2px;
+  margin-bottom: 5px;
+  width: 40%
+}
+
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  
+  margin-bottom: 15px;
+  @include box_sizing;
+  color: black;
+
+}
+
+input {
+ 
+  height: auto !important;
+  color: black;
+   width: 50%;
+
+}
+
+#box{
+  width: 100%;
+}
+
+#error_explanation {
+  text-align: left;
+  color: #330000;
+  ul {
+    color: #330000;
+    margin: 0 0 30px 0;
+  }
+  h2{
+  color: #330000;
+  text-align: left;
+  }
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+label{
+    display:inline-block;
+    width: 100%;
+}
+input {
+  display:inline-block;
+  height: auto !important;
+}
+
+
+
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+
+  }
+}
+
+.checkbox {
+  float: left;
+  margin-top: -2px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  
+}
+
+#check {
+  margin-left: 0px;
+  width: 2%;
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+/* sidebar */
+
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+
+
+
+/* table */
+
+table, td, th {
+    border: 1px solid black;
+text-align: center;
+}
+
+table {
+    width: 50%;
+}
+
+  .bg-1 { 
+     background-color: #F5F5DC; /* Orange */
+     color: #FF4500;
+  }
+  .bg-2 { 
+      background-color: #474e5d;
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #FF4500;
+      color: #555555;
+  }
+  .bg-4 { 
+     color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+
+   /* header */
+
+
+  .navbar {
+      color: #330000;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+      
+  }
+
+  .navbar-default .navbar-nav > li > a {
+    color: #330000;
+}
+  .navbar-brand {
+    color: #330000;
+  }
+
+
+
+
+  #myNavbar{
+  color: #33334C;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  }
+
+  .row{
+   background-color: #F5F5DC; /* Beige color */
+   color: #330000;
+   width: 100%
+  }
+
+  .btn btn-primary{
+  background-color: #FF4500;
+  }
+
+  .form-control{
+  
+   color: black;
+  }
+  .actions{
+    h2{
+    text-align: left;
+    }
+  } 
+
+
+
+/* table */
+table, td, th {
+   border: 1px solid black;
+text-align: center;
+}table {
+   width: 100%;
+} 
+
+.form-control {
+  width: 50%;
+}
+
+#submit {
+  width: 50%;
+}
+
+.container {
+  color: #330000;
+}
+
+.link {
+  color: #330000;
+} 
+
+.anchor {
+  position: relative;
+  left: -26%;
+  color: #330000;
+}
+
+#sign {
+  background-color: white;
+  color: black;
+  border: 0;
+  width: 50%;
+}
+
+a {
+    color: #D2691E !important;
+}

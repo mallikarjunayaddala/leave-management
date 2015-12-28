@@ -1,0 +1,31 @@
+<h1>Leaves#update</h1>
+<p>Find me in app/views/leaves/update.html.erb</p>
+<% if (current_user.firstname == leave.user.firstname) %>
+
+$("#btn").mouseenter(function(){
+	var a = $('#first').val();
+  var b = $('#second').val();
+  var c = a.split('-')
+  var d = b.split('-')
+  var e = (d[0]-c[0])+1
+
+	$("#btn").val(e);
+}); 
+
+$(document).ready( function() {
+  $('.datepicker').datepicker({ dateFormat: 'dd-mm-yy' });
+$("#btn").mouseenter(function(){
+  var a = $('#first').val();
+  var b = $('#second').val();
+  var c = a.split('-')
+  var d = b.split('-')
+var From_date = new Date(c[0]);
+var To_date = new Date(d[0]);
+var diff_date =  To_date - From_date;
+ 
+var years = Math.floor(diff_date/31536000000);
+var months = Math.floor((diff_date % 31536000000)/2628000000);
+var days = Math.floor(((diff_date % 31536000000) % 2628000000)/86400000);
+$("#btn").val(years);
+});
+});
